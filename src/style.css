@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+.header{
+  font-size: 50px;
+  text-align: center;
+  padding: 15px;
+}
+
+body{
+  /*background-color: #7D2A80;*/
+background-color: #AB47BC;
+}
+
+.menu{
+  width: 10%;
+  float: left;
+  padding: 15px;
+
+}
+
+.button{
+  background-repeat: no-repeat;
+  background-size: 80px 70px;
+  background-color: transparent;
+  width: 70%;
+  height: 70px;
+  padding: 15px;
+  margin: 10px 950px 0px 20px;
+}
+
+#buttonBrasil{
+  background-image:url("brasilbandera.jpg");
+}
+.countries{
+  /*color:#B32931;*/
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  background-color: transparent;
+  padding: 15px;
+  opacity: 0.7;
+  }
+#buttonChile{
+background-image:url("chilebandera.jpg");
+}
+#buttonPeru{
+background-image:url("perubandera.jpg");
+}
+#buttonMexico{
+background-image:url("mexicobandera.jpg");
+}
+
+
+.main{
+  background-image:url("mujeres.jpg");
+  /*opacity: 0.5;*/
+  width: 90%;
+  float: left;
+  height: 700px;
+  padding: 15px;
+
+}
+#summary{
+  margin: 0px 150px 0px 200px;
+
+}
