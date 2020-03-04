@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+/*Bloqueo inicial de las pantalla*/
 #screenBrasil, #screenChile,#screenMexico,#screenPeru{display: none;}
 
 .header{
@@ -21,7 +22,17 @@
   float:left;
   padding:15px;
 }
+
 /*Declarando las columnas para el diseno responsive*/
+
+/*Celular*/
+[class*="col-"]{
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+
 /*computadora*/
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -36,12 +47,8 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-/*Celular*/
-@@media only screenand(max-width: 768px) {
-[class*="col-"]{
-  width: 100%;
 }
-}
+
 
 
 body{
@@ -54,15 +61,15 @@ body{
   margin: 0;
   padding: 0;
 }
-
+/*Botones del menu de paises*/
 .button{
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
   border-color: #684F80;
   border-radius: 8px;
-  width: 60px;
-  height: 30px;
+  width: 80px;
+  height: 50px;
   padding: 5px;
   border: outset;
 }
@@ -70,19 +77,19 @@ body{
   background-color: #C94AFF;
 }
 
-
+/*Nombre de cada pais*/
 .countries{
   color:black;
   font-size: 25px;
   text-align: left;
   background-color:transparent;
+  background-size: contain;
   padding: 5px;
   }
 
 #buttonBrasil{
     background-image:url("brasilbandera.jpg");
   }
-
 #buttonChile{
 background-image:url("chilebandera.jpg");
 }
@@ -92,8 +99,16 @@ background-image:url("perubandera.jpg");
 #buttonMexico{
 background-image:url("mexicobandera.jpg");
 }
+
+/*Estilo de los botones ano e indicador*/
 .desicion{
-  background-image: -webkit-linear-gradient(top, #239983, #DDA7E8);
+  background-color: #FFAFFF;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  /*background-image: -webkit-linear-gradient(top, #239983, #DDA7E8);
   background-image: -moz-linear-gradient(top, #239983, #DDA7E8);
   background-image: -ms-linear-gradient(top, #239983, #DDA7E8);
   background-image: -o-linear-gradient(top, #239983, #DDA7E8);
@@ -109,8 +124,8 @@ background-image:url("mexicobandera.jpg");
   padding: 19px;
   text-decoration: none;
 
-}
-.desicion:hover{
+*/}
+/*.desicion:hover{
 
   background: #FFEFBA;
   background-image: -webkit-linear-gradient(top, #FFEFBA, #6CCCBA);
@@ -119,6 +134,36 @@ background-image:url("mexicobandera.jpg");
   background-image: -o-linear-gradient(top, #FFEFBA, #6CCCBA);
   background-image: linear-gradient(to bottom, #FFEFBA, #6CCCBA);
   text-decoration: none;
+}*/
+.menuBrasil{
+  position: relative;
+  display: inline-block;
+}
+.dropdownmenuBrasil{
+  display: none;
+  position: absolute;
+  background-color: #F082FF;
+  min-width: 560px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdownmenuBrasil a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+.dropdownmenuBrasil a:hover {background-color: #f1f1f1}
+
+.menuBrasil:hover .dropdownmenuBrasil {
+  display: block;
+}
+
+.menuBrasil:hover .desicion {
+  background-color: #A437B3;
 }
 
 /*main*/
@@ -126,17 +171,15 @@ background-image:url("mexicobandera.jpg");
   border-style: outset;
   background-image:url("mujeres.jpg");
   background-size: contain;
-  height: 500px;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: auto;
 
 }
 
 .summary{
 
   margin-top: 500px;
-
-}
-
-.summary p{
   color:black;
   padding: 5px;
   font-size: 20px;
