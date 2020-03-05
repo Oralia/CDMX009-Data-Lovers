@@ -4,43 +4,71 @@ import data from './data/worldbank/worldbank.js';
 export const example = () => {
   return 'example';
 };
-
-//const infoPeru =worldbank.filer(info==>(info.countryName==='Perú')){
-//return infoPeru;
-//}
 console.log(data);
+
+//Filtro que prporciona los ndicadores que contienen la palabra mujer en Peru
 
 let newdataPeru = data.PER.indicators.filter(indicator=>
   {
     return indicator.indicatorName.includes("mujeres") // regExp
-  }
+  })
 
-)
 console.log(newdataPeru);
 
-let newdataMexico = data.MEX.indicators.filter(indicator=>
-  {
-    return indicator.indicatorName.includes("mujeres")
+
+
+for (var i = 0; i < newdataPeru.length; i++) {
+  function mostrarContenidoIndicador(scannedItem) {
+    return newdataPeru[scannedItem];
   }
+    let indicadoresName=[mostrarContenidoIndicador(i)];
+  console.log(mostrarContenidoIndicador(i));
+//  console.log(indicadoresName);
+}
 
-)
-console.log(newdataMexico);
 
-let newdataBrasil = data.BRA.indicators.filter(indicator=>
-  {
-    return indicator.indicatorName.includes("mujeres")
-  }
+function información(arr) {
 
-)
-console.log(newdataBrasil);
+  return Object.keys(arr);
 
-let newdataChile = data.CHL.indicators.filter(indicator=>
-  {
-    return indicator.indicatorName.includes("mujeres")
-  }
+}
 
-)
-console.log(newdataChile);
+console.log(información(newdataPeru));
+
+
+
+
+//Filtro que prporciona los ndicadores que contienen la palabra mujer en Mexico
+
+//let newdataMexico = data.MEX.indicators.filter(indicator=>
+  //{
+    //return indicator.indicatorName.includes("mujeres")
+  //}
+
+//)
+//console.log(newdataMexico);
+
+//Filtro que prporciona los ndicadores que contienen la palabra mujer en Brasil
+
+//let newdataBrasil = data.BRA.indicators.filter(indicator=>
+//  {
+  //  return indicator.indicatorName.includes("mujeres")
+  //}
+
+//)
+//console.log(newdataBrasil);
+
+//Filtro que prporciona los ndicadores que contienen la palabra mujer en Chile
+
+//let newdataChile = data.CHL.indicators.filter(indicator=>
+  //{
+    //return indicator.indicatorName.includes("mujeres")
+  //}
+
+//)
+//console.log(newdataChile);
+
+//Para visualizar que hay en data
 //console.log(datos(data));
 
 
@@ -63,9 +91,3 @@ console.log(newdataChile);
 //}
 
 //console.log(datosMex(data.MEX.indicators));
-
-//let numeros=[1,2,3,4,5,6,7,8,9,0];
-//let newnumeros=numeros.filter(item=>{return item>5})
-//console.log(newnumeros);
-//let newnumeros=numeros.filter(function(item){return item>5});
-//console.log(newnumeros);
