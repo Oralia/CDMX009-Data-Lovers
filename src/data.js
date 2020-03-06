@@ -8,37 +8,25 @@ console.log(data);
 
 //Filtro que prporciona los ndicadores que contienen la palabra mujer en Peru
 
-let newdataPeru = data.PER.indicators.filter(indicator=>
+let newdataPeru = data.PER.indicators.filter(indicators=>
   {
-    return indicator.indicatorName.includes("mujeres") // regExp
+    return indicators.indicatorName.includes("mujeres")  && indicators.indicatorName.includes("empleo") // regExp
   })
 
 console.log(newdataPeru);
 
+//Funcion que retorna los nombres de los indicadores para Peru
+for (var i = 0; i < newdataPeru.length; i++)
+{
 
-
-for (var i = 0; i < newdataPeru.length; i++) {
-  function mostrarContenidoIndicador(scannedItem) {
-    return newdataPeru[scannedItem];
-  }
-    let indicadoresName=[mostrarContenidoIndicador(i)];
-  console.log(mostrarContenidoIndicador(i));
-//  console.log(indicadoresName);
-}
-
-
-function información(arr) {
-
-  return Object.keys(arr);
+  let indicatorPeru=newdataPeru[i].indicatorName;
+  console.log(indicatorPeru);
 
 }
 
-console.log(información(newdataPeru));
 
 
-
-
-//Filtro que prporciona los ndicadores que contienen la palabra mujer en Mexico
+//Filtro que prporciona los indicadores que contienen la palabra mujer en Mexico
 
 //let newdataMexico = data.MEX.indicators.filter(indicator=>
   //{
