@@ -32,7 +32,7 @@ let newdataBrasil = data.BRA.indicators.filter(indicators=>
     indicatorList.add(indicator);
 
   }
-
+//Probando para subir
 
   //Filtro que prporciona los indicadores que contienen la palabra mujer en Mexico
 
