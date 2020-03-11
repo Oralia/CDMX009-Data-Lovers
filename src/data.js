@@ -1,12 +1,11 @@
 import data from './data/worldbank/worldbank.js';
 // esta es una función de ejemplo
-export const example = () => {
-  return 'example';
-};
-let countryData=data.BRA;
-let type="viole";
+//export const example = () => {
+  //return 'example';
+//};
 
-//function indicatorCountry (type,countryData){
+
+export const indicatorCountry =(type,countryData)=>{
   //Filtro que proporciona los indicadores para Brasil "Mujeres y Empleo"
   if (type==="empleo") {
       let newdataEmpleo = countryData.indicators.filter(indicators=>
@@ -24,6 +23,15 @@ let type="viole";
 
           let indicatorEmpleo=newdataEmpleo[i].indicatorName;
           console.log(indicatorEmpleo);
+
+        }
+  //Funcion que despliega el menu en pantalla para brasil
+        for (let i = 0; i < newdataEmpleo.length; i++) {
+        let indicatorList = document.getElementById("indicatorsSelectBrasil");
+        let indicator= document.createElement("option");
+        option.value = i;
+        indicator.text = newdataEmpleo[i].indicatorName;
+        indicatorList.add(indicator);
 
         }
   }
@@ -101,9 +109,9 @@ let type="viole";
                 console.log(indicatorViolencia);
               }
   }
-  else {
+  else if (type==="Negocios"){
         //Filtro que proporciona los indicadores para Brasil "Mujeres y Negocios"
-        let newdataNegocios = countryData.indicators.filter(indicators=>
+        let newdataNegocios =countryData.indicators.filter(indicators=>
             {
                 return indicators.indicatorName.includes("mujeres") && (indicators.indicatorName.includes("iniciar")
                 | indicators.indicatorName.includes("Independientes")| indicators.indicatorName.includes("propiedad"))
@@ -118,13 +126,5 @@ let type="viole";
           }
 
   }
-//}      //Esto debe ir en el main.js
-          //Funcion que despliega el menu en pantalla para brasil
-          //for (let i = 0; i < newdataBrasil.length; i++) {
-          //let indicatorList = document.getElementById("indicatorsSelectBrasil");
-          //let indicator= document.createElement("option");
-          //option.value = i;
-          //indicator.text = newdataBrasil[i].indicatorName;
-          //indicatorList.add(indicator);
 
-          //}
+}

@@ -1,6 +1,8 @@
-import {example} from './data.js';
+import data from './data/worldbank/worldbank.js';
+import {indicatorCountry} from './data.js';
 
-console.log(example);
+console.log(indicatorCountry);
+
 
 function menuInitial (){
   document.getElementById("screen").style.display="block";
@@ -11,17 +13,24 @@ function menuInitial (){
 }
 
 function dataBrasil(){
+  const countryData=data.BRA;
+  let type="empleo";
+
+  let indicador=indicatorCountry( countryData.valu,type.value);
+  document.getElementById("indicatorsSelectBrasil").innerText=indicador;
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="block";
   }
 
 function dataChile(){
+  const countryData=data.CHL;
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="block";
 }
 
 function dataMexico(){
+  const countryData=data.MEX;
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="none";
@@ -29,6 +38,7 @@ function dataMexico(){
 }
 
 function dataPeru(){
+  const countryData=data.PER;
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="none";
