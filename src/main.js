@@ -1,4 +1,4 @@
-import { example } from './data.js';
+import {example} from './data.js';
 
 console.log(example);
 
