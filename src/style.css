@@ -3,7 +3,7 @@
 }
 
 /*Bloqueo inicial de las pantalla*/
-#screenBrasil, #screenChile,#screenMexico,#screenPeru{display: none;}
+#screenBrasil, #screenChile,#screenMexico,#screenPeru,#screenIndicators{display: none;}
 
 .header{
   font-size: 40px;

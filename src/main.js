@@ -1,7 +1,7 @@
-import data from './data/worldbank/worldbank.js';
-import {indicatorCountry} from './data.js';
-
-console.log(data);
+//import data from './data/worldbank/worldbank.js';
+//import {indicatorCountry} from './data.js';
+import {example} from './data.js';
+console.log(example);
 
 
 
@@ -11,43 +11,51 @@ function menuInitial (){
   document.getElementById("screenChile").style.display="none";
   document.getElementById("screenMexico").style.display="none";
   document.getElementById("screenPeru").style.display="none";
+  document.getElementById("screenIndicators").style.display="none";
 }
 
 
 
 function dataBrasil(){
-  const countryData=data.BRA;
+  //
   //let type="empleo";
 
-  indicatorCountry( countryData.value);
+  //indicatorCountry( countryData.value);
   //document.getElementById("indicatorsSelectBrasil").innerText=indicador;
-  console.log (indicatorCountry);
+  //console.log (indicatorCountry);
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="block";
+  document.getElementById("screenIndicators").style.display="block";
   }
 
 function dataChile(){
-  const countryData=data.CHL;
+  //const countryData=data.CHL;
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="block";
+  document.getElementById("screenIndicators").style.display="block";
+
 }
 
 function dataMexico(){
-  const countryData=data.MEX;
+//  const countryData=data.MEX;
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="none";
   document.getElementById("screenMexico").style.display="block";
+  document.getElementById("screenIndicators").style.display="block";
+
 }
 
 function dataPeru(){
-  const countryData=data.PER;
+  //const countryData=data.PER;
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="none";
   document.getElementById("screenMexico").style.display="none";
   document.getElementById("screenPeru").style.display="block";
+  document.getElementById("screenIndicators").style.display="block";
+
 }
 
 //Funcion que despliega el menu en pantalla para brasil
@@ -60,9 +68,6 @@ function dataPeru(){
 //}
 
 document.getElementById("menu").addEventListener("click",menuInitial);
-document.getElementById("menu1").addEventListener("click",menuInitial);
-document.getElementById("menu2").addEventListener("click",menuInitial);
-document.getElementById("menu3").addEventListener("click",menuInitial);
 document.getElementById("buttonBrasil").addEventListener("click",dataBrasil);
 document.getElementById("buttonChile").addEventListener("click",dataChile);
 document.getElementById("buttonMexico").addEventListener("click",dataMexico);
