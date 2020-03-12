@@ -1,7 +1,5 @@
 //import data from './data/worldbank/worldbank.js';
-//import {indicatorCountry} from './data.js';
 import {example} from './data.js';
-console.log(example);
 
 
 
@@ -17,12 +15,26 @@ function menuInitial (){
 
 
 function dataBrasil(){
-  //
-  //let type="empleo";
+  /* const countryData=data.BRA;
 
-  //indicatorCountry( countryData.value);
-  //document.getElementById("indicatorsSelectBrasil").innerText=indicador;
-  //console.log (indicatorCountry);
+  let empleoBrasil=indicatorsType.empleo(countryData.arrar);
+
+for (var i = 0; i < empleoBrasil.length; i++)
+  {
+
+    let indicatorEmpleo=empleoBrasil[i].indicatorName;
+    console.log(indicatorEmpleo);
+
+    //función que coloca el nombre del indicador en el menu para cada pais
+    for (let i = 0; i < newdataEmpleo.length; i++) {
+      let indicatorList = document.getElementById("indicatorsSelectEmpleo");
+      let option = document.createElement("option");
+      option.text = indicatorEmpleo;
+      indicatorList.add(option);
+    }
+}
+
+*/
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="block";
   document.getElementById("screenIndicators").style.display="block";
@@ -38,7 +50,7 @@ function dataChile(){
 }
 
 function dataMexico(){
-//  const countryData=data.MEX;
+  //const countryData=data.MEX;
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="none";

@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>La mujer en Latinoamerica</title>
-
+<link href="https://fonts.googleapis.com/css?family=Oranienbaum|Roboto&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
+
+</style>
 </head>
 
 <body>
@@ -14,7 +16,7 @@
     <div class="header">
       <p>LA VIDA DE LAS MUJERES EN LATINOAMERICA</p>
     </div>
-    <script type="module" src="main.js"></script>
+
 
     <div class="row">
       <div class="col-2 menu">
@@ -32,6 +34,7 @@
     </div>
 
     <div class="col-10">
+      <br>
       <div class="summary">
         <p >En los paises latinoamericanos se ha modificado y creado leyes que apoyan alas mujeres en la vida política, violencia de género, sexualidad e igualdad y pese a que existen grandes avances aún hay retos que obstruyen garantizar los derechos de las mujeres.
           Te invitamos a conocer los Indicadores del Desarrolloo Mundial en los que puedes encontrar información relacionada con el desarrollo de la mujer con cifras actuales e historicas.</p>
@@ -40,52 +43,53 @@
     </div>
 
     <div id="screenBrasil">
-      <h2>Brasil</h2>
+      <h2 class="countriesScreen">Brasil</h2>
     </div>
 
     <div id="screenChile">
-      <h2>Chile</h2>
+      <h2 class="countriesScreen">Chile</h2>
     </div>
 
 
     <div id="screenMexico">
-      <h2>México</h2>
+      <h2 class="countriesScreen">México</h2>
     </div>
 
     <div id="screenPeru">
-      <h2>Perú</h2>
+      <h2 class="countriesScreen">Perú</h2>
     </div>
 
     <!--Pantalla que muestra los indicadores -->
     <div id="screenIndicators">
       <p> Selecciona el indicador que deseas conocer</p>
+
       <br>
-      <label for='indicadores'> Educación </label>
+      <label for='indicadores' id='indicatorsType'>Educación </label>
       <select class="indicatorsSelect" id="indicatorsSelectEducacion">
       <option label="Seleccione indicador" value="-"></option>
       </select>
       <br>
-      <label for='indicadores'> Empleo </label>
+      <label for='indicadores' id='indicatorsType'> Empleo </label>
       <select class="indicatorsSelect" id="indicatorsSelectEmpleo">
       <option label="Seleccione indicador" value="-"></option>
       </select>
       <br>
-      <label for='indicadores'> Negocios</label>
+      <label for='indicadores' id='indicatorsType'> Negocios</label>
       <select class="indicatorsSelect" id="indicatorsSelectNegocios">
       <option label="Seleccione indicador" value="-"></option>
       </select>
       <br>
-      <label for='indicadores'> Población</label>
+      <label for='indicadores' id='indicatorsType'> Población</label>
       <select class="indicatorsSelect" id="indicatorsSelectPoblacion">
       <option label="Seleccione indicador" value="-"></option>
       </select>
       <br>
-      <label for='indicadores'> Salud </label>
+      <label for='indicadores' id='indicatorsType'> Salud </label>
       <select class="indicatorsSelect" id="indicatorsSelectSalud">
       <option label="Seleccione indicador" value="-"></option>
       </select>
       <br>
-      <label for='indicadores'> violencia </label>
+      <label for='indicadores' id='indicatorsType'> Violencia</label>
       <select class="indicatorsSelect" id="indicatorsSelectViolencia">
       <option label="Seleccione indicador" value="-"></option>
       </select>
@@ -93,5 +97,8 @@
       <button id="menu" class="menu">Menu Principal</button>
 
     </div>
+
+        <script type="module" src="main.js"></script>
+
   </body>
   </html>
