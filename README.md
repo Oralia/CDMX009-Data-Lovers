@@ -1,3 +1,29 @@
+##La vida de la mujeres en latino Latinoamérica
+En esta pagina podrás conocer indicadores de desarrollo referente a las mujeres y a su vida, en los contextos como son población, educación, violencia, salud, trabajo, etc.
+
+Con una introducción  que se lee así,
+"En los países latinoamericanos se ha modificado y creado leyes que apoyan a las mujeres en la vida política, violencia de género, sexualidad e igualdad y pese a que existen grandes avances aún hay retos que obstruyen garantizar los derechos de las mujeres. Te invitamos a conocer los Indicadores del Banco de Desarrollo Mundial en los que puedes encontrar información relacionada con el desarrollo de la mujer con cifras actuales e históricas."
+
+Podemos ingresar a la pagina y seleccionar el país del que nos interese conocer sus datos.
+
+Posteriormente se selecciona el tipo de indicador para que puedas ver los indicadores que cada uno contiene.
+
+#El prototipo
+![imagen Prototipo](src/Proto1.jpg)
+
+![imagen Prototipo](src/PROTO2.jpg)
+
+#El prototipo de alta fidelidad
+
+[link](https://www.figma.com/proto/9wwx6mkhSeBiT1ZoOfxbHX/proyecto2?node-id=12%3A1&scaling=fit-width)
+
+#Github Pages
+[link](https://oralia.github.io/CDMX009-Data-Lovers/)
+
+#Mejoras
+Que la pagina te pueda mostrar la información de los indicadores ya se en tabla o en grafica.
+
+
 # Data Lovers
 
 ## Índice
@@ -98,22 +124,22 @@ y de equipo.
 - [X] Entender y reconocer por qué es importante el HTML semántico.
 - [X] Identificar y entender tipos de selectores en CSS.
 - [X] Entender como funciona `flexbox` en CSS.
-- [X] Construir tu aplicación respetando el diseño planeado (maquetación).
+- [] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
 
 - [] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
 - [X] Manejar eventos del DOM. (addEventListener)
-- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
+- [X] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
 
 ### Javascript
 
 - [X] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
 - [X] Manipular objects (key | value).
 - [ ] Entender el uso de condicionales (`if-else` | `switch`).
-- [ ] Entender el uso de bucles (`for` | `forEach`).
+- [X] Entender el uso de bucles (`for` | `forEach`).
 - [ ] Entender la diferencia entre expression y statements.
-- [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
+- [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [x] Utilizar ES Modules (`import` | `export`).
 
@@ -123,10 +149,10 @@ y de equipo.
 ### Git y GitHub
 - [X] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
 - [X] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
-- [] Colaborar en Github (pull requests).
+- [X] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
-- [ ] Organizar y dividir el código en módulos (Modularización).
+- [X] Organizar y dividir el código en módulos (Modularización).
 - [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
 
