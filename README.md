@@ -185,8 +185,8 @@ correspondiente a cada set de datos que elijas.
 El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
 desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
 diseño debe seguir los fundamentos de _visual design_.
-[Prototipo de alta fidelidad]
-(https://www.figma.com/proto/9wwx6mkhSeBiT1ZoOfxbHX/proyecto2?node-id=12%3A1&scaling=min-zoom)
+[prototipo de alta fidelidad]
+(https://www.figma.com/proto/9wwx6mkhSeBiT1ZoOfxbHX/proyecto2?node-id=12%3A1&scaling=min-zoom).
 
 #### Testeos de usabilidad
 
