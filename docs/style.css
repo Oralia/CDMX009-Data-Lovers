@@ -2,12 +2,13 @@
   box-sizing: border-box;
 }
 
-#screenBrasil, #screenChile,#screenMexico,#screenPeru{display: none;}
+/*Bloqueo inicial de las pantalla*/
+#screenBrasil, #screenChile,#screenMexico,#screenPeru,#screenIndicators{display: none;}
 
 .header{
   font-size: 40px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   background-color: #C94AFF;
   color:#ffffff;
 }
@@ -21,7 +22,17 @@
   float:left;
   padding:15px;
 }
+
 /*Declarando las columnas para el diseno responsive*/
+
+/*Celular*/
+[class*="col-"]{
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+
 /*computadora*/
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -36,12 +47,8 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-/*Celular*/
-@@media only screenand(max-width: 768px) {
-[class*="col-"]{
-  width: 100%;
 }
-}
+
 
 
 body{
@@ -55,34 +62,37 @@ body{
   padding: 0;
 }
 
+
+/*Botones del menu de paises*/
 .button{
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-color: transparent;
   border-color: #684F80;
   border-radius: 8px;
-  width: 60px;
-  height: 30px;
+  width: 90px;
+  height: 55px;
   padding: 5px;
   border: outset;
 }
-.button:hover{
-  background-color: #C94AFF;
-}
 
 
-.countries{
+/*Nombre de cada pais*/
+.countries,#indicatorsType{
   color:black;
   font-size: 25px;
   text-align: left;
   background-color:transparent;
+  background-size: contain;
   padding: 5px;
+  font-family: 'Roboto', sans-serif;
+
   }
+
 
 #buttonBrasil{
     background-image:url("brasilbandera.jpg");
   }
-
 #buttonChile{
 background-image:url("chilebandera.jpg");
 }
@@ -92,52 +102,79 @@ background-image:url("perubandera.jpg");
 #buttonMexico{
 background-image:url("mexicobandera.jpg");
 }
-.desicion{
-  background-image: -webkit-linear-gradient(top, #239983, #DDA7E8);
-  background-image: -moz-linear-gradient(top, #239983, #DDA7E8);
-  background-image: -ms-linear-gradient(top, #239983, #DDA7E8);
-  background-image: -o-linear-gradient(top, #239983, #DDA7E8);
-  background-image: linear-gradient(to bottom, #239983, #DDA7E8);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;text-shadow: 3px 2px 1px #9daef5;
-  -webkit-box-shadow: 6px 5px 24px #666666;
-  -moz-box-shadow: 6px 5px 24px #666666;
-  box-shadow: 6px 5px 24px #666666;font-family: Arial;
-  color: #fafafa;
-  font-size: 27px;
-  padding: 19px;
-  text-decoration: none;
 
+
+.countriesScreen {
+
+  text-align: center;
+  font-size: 35px;
+  background-color: #C94AFF;
+  color:#ffffff;
+  font-family: 'Roboto', sans-serif;
 }
-.desicion:hover{
-
-  background: #FFEFBA;
-  background-image: -webkit-linear-gradient(top, #FFEFBA, #6CCCBA);
-  background-image: -moz-linear-gradient(top, #FFEFBA, #6CCCBA);
-  background-image: -ms-linear-gradient(top, #FFEFBA, #6CCCBA);
-  background-image: -o-linear-gradient(top, #FFEFBA, #6CCCBA);
-  background-image: linear-gradient(to bottom, #FFEFBA, #6CCCBA);
-  text-decoration: none;
-}
-
 /*main*/
 .col-10{
   border-style: outset;
   background-image:url("mujeres.jpg");
-  background-size: contain;
+  background-size: auto;
+  /*background-repeat: no-repeat;*/
+  max-width: 80%;
   height: 500px;
+/*  padding: 100px;*/
 
 }
-
-.summary{
-
+.summary {
   margin-top: 500px;
+  color: black;
+  /*padding: 5px;*/
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.selectIndicator{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
 
 }
 
-.summary p{
-  color:black;
-  padding: 5px;
-  font-size: 20px;
+
+
+.buttonIndicator {
+  background-color: #E338E8;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: outset;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dropdown {
+  position: relative;
+  display: inline;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*.dropdown-content a:hover {background-color: #E096FF}*/
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
