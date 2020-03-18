@@ -1,5 +1,5 @@
 import data from './data/worldbank/worldbank.js';
-import {empleo, población} from './data.js';
+import {educación, empleo, negocios, población, salud, violencia} from './data.js';
 
 
 
@@ -12,39 +12,118 @@ function menuInitial (){
   document.getElementById("screenIndicators").style.display="none";
 }
 
-
 function dataBrasil(){
 
-let countryData=data.BRA;
+  let countryData=data.BRA;
 
-  var text = "<ul>";
-  for ( var i = 0; i < empleo(countryData).length; i++) {
-  text += "<li>" + empleo(countryData)[i]+ "</li>";
+  var textEducacion = "<ul>";
+  var textEmpleo = "<ul>";
+  var textNegocios = "<ul>";
+  var textPoblacion = "<ul>";
+  var textSalud = "<ul>";
+  var textViolencia = "<ul>";
+
+  for ( var i = 0; i < educación(countryData).length; i++) {
+    textEducacion  += "<li>" + educación(countryData)[i]+ "</li>";
   }
+    textEducacion += "</ul>"
 
-/*for ( var i = 0; i < población(countryData).length; i++) {
- text += "<li>" + población(countryData)[i] + "</li>";
-}*/
- text += "</ul>";
+ for ( var i = 0; i < empleo(countryData).length; i++) {
+    textEmpleo += "<li>" + empleo(countryData)[i]+ "</li>";
+  }
+    textEmpleo += "</ul>"
 
-  document.getElementById("Empleo").innerHTML = text;
-  //document.getElementById("empleo").innerHTML = text;
+  for ( var i = 0; i < negocios(countryData).length; i++) {
+   textNegocios += "<li>" + negocios(countryData)[i] + "</li>";
+  }
+textNegocios += "</ul>";
 
+for ( var i = 0; i < población(countryData).length; i++) {
+ textPoblacion  += "<li>" + población(countryData)[i] + "</li>";
+}
 
+textPoblacion += "</ul>";
 
-    /*for (let i = 0; i < población(countryData).length; i++) {
-    let indicatorList = document.getElementById("indicatorsSelectPoblacion");
-    let option = document.createElement("option");
-    option.text = población(countryData)[i].indicatorName;
-    indicatorList.add(option);
-}*/
+for ( var i = 0; i < salud(countryData).length; i++) {
+ textSalud += "<li>" + salud(countryData)[i] + "</li>";
+}
+
+textSalud += "</ul>";
+
+for ( var i = 0; i < violencia(countryData).length; i++) {
+ textViolencia += "<li>" + violencia(countryData)[i] + "</li>";
+}
+
+  textViolencia += "</ul>";
+
+ document.getElementById("Educación").innerHTML = textEducacion ;
+ document.getElementById("Empleo").innerHTML = textEmpleo ;
+ document.getElementById("Población").innerHTML = textPoblacion;
+ document.getElementById("Negocios").innerHTML= textNegocios;
+ document.getElementById("Salud").innerHTML= textSalud;
+ document.getElementById("Violencia").innerHTML= textViolencia;
+
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="block";
   document.getElementById("screenIndicators").style.display="block";
 }
 
+
 function dataChile(){
-  //const countryData=data.CHL;
+  const countryData=data.CHL;
+
+  var textEducacion = "<ul>";
+  var textEmpleo = "<ul>";
+  var textNegocios = "<ul>";
+  var textPoblacion = "<ul>";
+  var textSalud = "<ul>";
+  var textViolencia = "<ul>";
+
+  for ( var i = 0; i < educación(countryData).length; i++) {
+    textEducacion  += "<li>" + educación(countryData)[i]+ "</li>";
+  }
+    textEducacion += "</ul>"
+
+  for ( var i = 0; i < empleo(countryData).length; i++) {
+    textEmpleo += "<li>" + empleo(countryData)[i]+ "</li>";
+  }
+    textEmpleo += "</ul>"
+
+  for ( var i = 0; i < negocios(countryData).length; i++) {
+   textNegocios += "<li>" + negocios(countryData)[i] + "</li>";
+  }
+  textNegocios += "</ul>";
+
+  for ( var i = 0; i < población(countryData).length; i++) {
+  textPoblacion  += "<li>" + población(countryData)[i] + "</li>";
+  }
+
+  textPoblacion += "</ul>";
+
+  for ( var i = 0; i < salud(countryData).length; i++) {
+  textSalud += "<li>" + salud(countryData)[i] + "</li>";
+  }
+
+  textSalud += "</ul>";
+
+  for ( var i = 0; i < violencia(countryData).length; i++) {
+  textViolencia += "<li>" + violencia(countryData)[i] + "</li>";
+  }
+
+  textViolencia += "</ul>";
+  document.getElementById("Educación").innerHTML = textEducacion ;
+  document.getElementById("Empleo").innerHTML = textEmpleo ;
+  document.getElementById("Población").innerHTML = textPoblacion;
+  document.getElementById("Negocios").innerHTML= textNegocios;
+  document.getElementById("Salud").innerHTML= textSalud;
+  document.getElementById("Violencia").innerHTML= textViolencia;
+
+  document.getElementById("screen").style.display="none";
+  document.getElementById("screenBrasil").style.display="block";
+  document.getElementById("screenIndicators").style.display="block";
+
+
+
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="block";
@@ -53,7 +132,58 @@ function dataChile(){
 
 
 function dataMexico(){
-  //const countryData=data.MEX;
+  const countryData=data.MEX;
+
+  var textEducacion = "<ul>";
+  var textEmpleo = "<ul>";
+  var textNegocios = "<ul>";
+  var textPoblacion = "<ul>";
+  var textSalud = "<ul>";
+  var textViolencia = "<ul>";
+
+  for ( var i = 0; i < educación(countryData).length; i++) {
+    textEducacion  += "<li>" + educación(countryData)[i]+ "</li>";
+  }
+    textEducacion += "</ul>"
+
+  for ( var i = 0; i < empleo(countryData).length; i++) {
+    textEmpleo += "<li>" + empleo(countryData)[i]+ "</li>";
+  }
+    textEmpleo += "</ul>"
+
+  for ( var i = 0; i < negocios(countryData).length; i++) {
+   textNegocios += "<li>" + negocios(countryData)[i] + "</li>";
+  }
+  textNegocios += "</ul>";
+
+  for ( var i = 0; i < población(countryData).length; i++) {
+  textPoblacion  += "<li>" + población(countryData)[i] + "</li>";
+  }
+
+  textPoblacion += "</ul>";
+
+  for ( var i = 0; i < salud(countryData).length; i++) {
+  textSalud += "<li>" + salud(countryData)[i] + "</li>";
+  }
+
+  textSalud += "</ul>";
+
+  for ( var i = 0; i < violencia(countryData).length; i++) {
+  textViolencia += "<li>" + violencia(countryData)[i] + "</li>";
+  }
+
+  textViolencia += "</ul>";
+  document.getElementById("Educación").innerHTML = textEducacion ;
+  document.getElementById("Empleo").innerHTML = textEmpleo ;
+  document.getElementById("Población").innerHTML = textPoblacion;
+  document.getElementById("Negocios").innerHTML= textNegocios;
+  document.getElementById("Salud").innerHTML= textSalud;
+  document.getElementById("Violencia").innerHTML= textViolencia;
+
+  document.getElementById("screen").style.display="none";
+  document.getElementById("screenBrasil").style.display="block";
+  document.getElementById("screenIndicators").style.display="block";
+
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="none";
@@ -63,7 +193,58 @@ function dataMexico(){
 }
 
 function dataPeru(){
-  //const countryData=data.PER;
+  const countryData=data.PER;
+
+  var textEducacion = "<ul>";
+  var textEmpleo = "<ul>";
+  var textNegocios = "<ul>";
+  var textPoblacion = "<ul>";
+  var textSalud = "<ul>";
+  var textViolencia = "<ul>";
+
+  for ( var i = 0; i < educación(countryData).length; i++) {
+    textEducacion  += "<li>" + educación(countryData)[i]+ "</li>";
+  }
+    textEducacion += "</ul>"
+
+  for ( var i = 0; i < empleo(countryData).length; i++) {
+    textEmpleo += "<li>" + empleo(countryData)[i]+ "</li>";
+  }
+    textEmpleo += "</ul>"
+
+  for ( var i = 0; i < negocios(countryData).length; i++) {
+   textNegocios += "<li>" + negocios(countryData)[i] + "</li>";
+  }
+  textNegocios += "</ul>";
+
+  for ( var i = 0; i < población(countryData).length; i++) {
+  textPoblacion  += "<li>" + población(countryData)[i] + "</li>";
+  }
+
+  textPoblacion += "</ul>";
+
+  for ( var i = 0; i < salud(countryData).length; i++) {
+  textSalud += "<li>" + salud(countryData)[i] + "</li>";
+  }
+
+  textSalud += "</ul>";
+
+  for ( var i = 0; i < violencia(countryData).length; i++) {
+  textViolencia += "<li>" + violencia(countryData)[i] + "</li>";
+  }
+
+  textViolencia += "</ul>";
+  document.getElementById("Educación").innerHTML = textEducacion ;
+  document.getElementById("Empleo").innerHTML = textEmpleo ;
+  document.getElementById("Población").innerHTML = textPoblacion;
+  document.getElementById("Negocios").innerHTML= textNegocios;
+  document.getElementById("Salud").innerHTML= textSalud;
+  document.getElementById("Violencia").innerHTML= textViolencia;
+
+  document.getElementById("screen").style.display="none";
+  document.getElementById("screenBrasil").style.display="block";
+  document.getElementById("screenIndicators").style.display="block";
+
   document.getElementById("screen").style.display="none";
   document.getElementById("screenBrasil").style.display="none";
   document.getElementById("screenChile").style.display="none";
@@ -73,17 +254,9 @@ function dataPeru(){
 
 }
 
-//Funcion que despliega el menu en pantalla para brasil
-//  for (let i = 0; i< countryData.indicators.length; i++) {
-  //let indicatorList = document.getElementById("indicatorsSelectBrasil");
-  //let indicator= document.createElement("option");
-      //option.value = i;
-  //indicator.text = countryData[i].indicatorName;
-  //indicatorList.add(indicator);
-//}
-
 document.getElementById("menu").addEventListener("click",menuInitial);
-document.getElementById("buttonBrasil").addEventListener("click",dataBrasil());
+document.getElementById("buttonBrasil").addEventListener("click",dataBrasil);
 document.getElementById("buttonChile").addEventListener("click",dataChile);
 document.getElementById("buttonMexico").addEventListener("click",dataMexico);
 document.getElementById("buttonPeru").addEventListener("click",dataPeru);
+//document.getElementById("EducationButton").addEventListener("click", showIndicator);

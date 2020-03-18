@@ -1,8 +1,35 @@
 import data from './data/worldbank/worldbank.js';
 
-export { empleo, población};
+export { educación, empleo, negocios, población, salud, violencia};
 
-//Filtro que proporciona los indicadores para Brasil "Mujeres y Empleo"
+
+//Filtro que proporciona los indicadores de "Mujeres y Educación"
+
+function educación(countryData){
+let newdataEducacion=[];
+let indicatorEducacion=[];
+  newdataEducacion = countryData.indicators.filter(indicators=>
+  {
+  return indicators.indicatorName.includes("mujeres")  && (indicators.indicatorName.includes("alfabetización")
+  | indicators.indicatorName.includes("alfabetizados")|| indicators.indicatorName.includes("escolar")
+  | indicators.indicatorName.includes("escuela")| indicators.indicatorName.includes("instrucción")
+  | indicators.indicatorName.includes("Educación")| indicators.indicatorName.includes("inscripciones")
+  | indicators.indicatorName.includes("ingreso"))
+})
+
+
+//  función que retorna los nombres de los indicadores de "Mujeres y Educación"
+for (var i = 0; i < newdataEducacion.length; i++)
+{
+indicatorEducacion.push(newdataEducacion[i].indicatorName)
+
+}
+
+return indicatorEducacion;
+}
+
+
+//Filtro que proporciona los indicadores de "Mujeres y Empleo"
 function empleo (countryData){
   let newdataEmpleo=[];
   let indicatorEmpleo=[];
@@ -21,7 +48,7 @@ function empleo (countryData){
 
 
 
-  // //Filtro que proporciona los indicadores para Brasil "Mujeres y Población"
+  // //Filtro que proporciona los indicadores de "Mujeres y Población"
 
   function población(countryData){
     let newdataPoblacion=[];
@@ -32,7 +59,7 @@ function empleo (countryData){
 
       })
 
-      //  función que retorna los nombres de los indicadores para Brasil "Mujeres y Población"
+      //  función que retorna los nombres de los indicadores de "Mujeres y Población"
       for (var i = 0; i < newdataPoblacion.length; i++)
       {
         indicatorPoblacion.push(newdataPoblacion[i].indicatorName)
@@ -41,93 +68,61 @@ function empleo (countryData){
       return indicatorPoblacion;
   }
 
-  //Filtro que proporciona los indicadores para Brasil "Mujeres y Educación"
-  /*let newdataEducacion = countryData.indicators.filter(indicators=>
+  //Filtro que proporciona los indicadores de "Mujeres y Negocios"
+function negocios(countryData){
+let newdataNegocios=[];
+let indicatorNegocios=[];
+
+newdataNegocios =countryData.indicators.filter(indicators=>
   {
-  return indicators.indicatorName.includes("mujeres")  && (indicators.indicatorName.includes("alfabetización")
-  | indicators.indicatorName.includes("alfabetizados")|| indicators.indicatorName.includes("escolar")
-  | indicators.indicatorName.includes("escuela")| indicators.indicatorName.includes("instrucción")
-  | indicators.indicatorName.includes("Educación")| indicators.indicatorName.includes("inscripciones")
-  | indicators.indicatorName.includes("ingreso"))
-})
+  return indicators.indicatorName.includes("mujeres") && (indicators.indicatorName.includes("iniciar")
+  | indicators.indicatorName.includes("Independientes")| indicators.indicatorName.includes("propiedad"))
+  })
 
+  //  función que retorna los nombres de los indicadores para Brasil "Mujeres y Negocios"
+  for (var i = 0; i < newdataNegocios.length; i++)
+  {
+  indicatorNegocios.push(newdataNegocios[i].indicatorName)
 
-//  función que retorna los nombres de los indicadores para Brasil "Mujeres y Educación"
-for (var i = 0; i < newdataEducacion.length; i++)
-{
-let indicatorEducacion=newdataEducacion[i].indicatorName;
-console.log(indicatorEducacion);
+  }
+  return indicatorNegocios;
 }
 
-for (let i = 0; i < newdataEducacion.length; i++) {
-let indicatorList = document.getElementById("indicatorsSelectEducacion");
-let option = document.createElement("option");
-option.text =newdataEducacion[i].indicatorName;
-indicatorList.add(option);
-}
 
-//Filtro que proporciona los indicadores para Brasil "Mujeres y Salud"
-let newdataSalud = countryData.indicators.filter(indicators=>
+//Filtro que proporciona los indicadores de "Mujeres y Salud"
+function salud (countryData){
+let newdataSalud=[];
+let indicatorSalud=[];
+
+newdataSalud = countryData.indicators.filter(indicators=>
 {
 return indicators.indicatorName.includes("mujeres")  && (indicators.indicatorName.includes("Prevalencia")
 | indicators.indicatorName.includes("nacer") || indicators.indicatorName.includes("anticoncepción"))
 })
-console.log(newdataSalud);
 
-//  función que retorna los nombres de los indicadores para Brasil "Mujeres y Salud"
+//  función que retorna los nombres de los indicadores de"Mujeres y Salud"
 for (var i = 0; i < newdataSalud.length; i++)
 {
-let indicatorSalud=newdataSalud[i].indicatorName;
-console.log(indicatorSalud);
+indicatorSalud.push(newdataSalud[i].indicatorName)
 }
-for (let i = 0; i < newdataSalud.length; i++) {
-let indicatorList = document.getElementById("indicatorsSelectSalud");
-let option = document.createElement("option");
-option.text = newdataSalud[i].indicatorName;
-indicatorList.add(option);
+return indicatorSalud;
 }
 
-//Filtro que proporciona los indicadores para Brasil "Mujeres y violencia"
-let newdataViolencia = countryData.indicators.filter(indicators=>
+//Filtro que proporciona los indicadores de "Mujeres y violencia"
+function violencia (countryData){
+let newdataViolencia =[];
+let indicatorViolencia =[];
+
+newdataViolencia = countryData.indicators.filter(indicators=>
 {
 return (indicators.indicatorName.includes("mujeres")|indicators.indicatorName.includes("Mujeres"))  && (indicators.indicatorName.includes("violencia")
 | indicators.indicatorName.includes("casaron")| indicators.indicatorName.includes("golpee"))
 })
-console.log(newdataViolencia);
 
 //  función que retorna los nombres de los indicadores para Brasil "Mujeres y violencia"
 for (var i = 0; i < newdataViolencia.length; i++)
 {
-let indicatorViolencia=newdataViolencia[i].indicatorName;
-console.log(indicatorViolencia);
+indicatorViolencia.push(newdataViolencia[i].indicatorName)
 }
-for (let i = 0; i < newdataViolencia.length; i++) {
-let indicatorList = document.getElementById("indicatorsSelectViolencia");
-let option = document.createElement("option");
-option.text = newdataViolencia[i].indicatorName;
-indicatorList.add(option);
+return indicatorViolencia;
 }
-
-//Filtro que proporciona los indicadores para Brasil "Mujeres y Negocios"
-let newdataNegocios =countryData.indicators.filter(indicators=>
-{
-return indicators.indicatorName.includes("mujeres") && (indicators.indicatorName.includes("iniciar")
-| indicators.indicatorName.includes("Independientes")| indicators.indicatorName.includes("propiedad"))
-})
-console.log(newdataNegocios);
-
-//  función que retorna los nombres de los indicadores para Brasil "Mujeres y Negocios"
-for (var i = 0; i < newdataNegocios.length; i++)
-{
-let indicatorNegocios=newdataNegocios[i].indicatorName;
-console.log(indicatorNegocios);
-}
-for (let i = 0; i < newdataNegocios.length; i++) {
-let indicatorList = document.getElementById("indicatorsSelectNegocios");
-let option = document.createElement("option");
-option.text = newdataNegocios[i].indicatorName;
-indicatorList.add(option);
-}
-
-//}
-*/

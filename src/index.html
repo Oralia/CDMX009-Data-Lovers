@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>La mujer en Latinoamerica</title>
-<link href="https://fonts.googleapis.com/css?family=Oranienbaum|Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oranienbaum|Roboto&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
-
 </style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -36,8 +36,8 @@
     <div class="col-10">
       <br>
       <div class="summary">
-        <p >En los paises latinoamericanos se ha modificado y creado leyes que apoyan alas mujeres en la vida política, violencia de género, sexualidad e igualdad y pese a que existen grandes avances aún hay retos que obstruyen garantizar los derechos de las mujeres.
-          Te invitamos a conocer los Indicadores del Desarrolloo Mundial en los que puedes encontrar información relacionada con el desarrollo de la mujer con cifras actuales e historicas.</p>
+        <p >En los países latinoamericanos se ha modificado y creado leyes que apoyan a las mujeres en la vida política, violencia de género, sexualidad e igualdad y pese a que existen grandes avances aún hay retos que obstruyen garantizar los derechos de las mujeres.
+          Te invitamos a conocer los Indicadores del Banco de Desarrollo Mundial en los que puedes encontrar información relacionada con el desarrollo de la mujer con cifras actuales e históricas.</p>
         </div>
       </div>
     </div>
@@ -61,47 +61,56 @@
 
     <!--Pantalla que muestra los indicadores -->
     <div id="screenIndicators">
-      <p> Selecciona el indicador que deseas conocer</p>
+      <p class="selectIndicator"> Selecciona el indicador que deseas conocer</p>
 
       <br>
-      <label for='indicadores' id='indicatorsType'>Educación </label>
-      <select class="indicatorsSelect" id="indicatorsSelectEducacion">
-      <option label="Seleccione indicador" value="-"></option>
-      </select>
-      <br>
-      <label for='indicadores' id='indicatorsType'> Empleo </label>
-      <!--<select class="indicatorsSelect" id="indicatorsSelectEmpleo">
-      <option label="Seleccione indicador"  value="-"></option>
 
+      <div class="dropdown">
+        <button id="EducacionButton" class="buttonIndicator"> Educación</button>
+        <div class="dropdown-content">
+          <a href="#" id="Educación" > </a>
+        </div>
+      </div>
 
-    </select>-->
-      <p id="Empleo" > Empleo</p>
-      <br>
-      <label for='indicadores' id='indicatorsType'> Negocios</label>
-      <select class="indicatorsSelect" id="indicatorsSelectNegocios">
-      <option label="Seleccione indicador" value="-"></option>
-      </select>
-      <br>
-      <label for='indicadores' id='indicatorsType'> Población</label>
-      <select class="indicatorsSelect" id="indicatorsSelectPoblacion">
-      <option label="Seleccione indicador" value="-" id="población"></option>
-      </select>
-      <br>
-      <label for='indicadores' id='indicatorsType'> Salud </label>
-      <select class="indicatorsSelect" id="indicatorsSelectSalud">
-      <option label="Seleccione indicador" value="-"></option>
-      </select>
-      <br>
-      <label for='indicadores' id='indicatorsType'> Violencia</label>
-      <select class="indicatorsSelect" id="indicatorsSelectViolencia">
-      <option label="Seleccione indicador" value="-"></option>
-      </select>
-      <br>
-      <button id="menu" class="menu">Menu Principal</button>
+      <div class="dropdown">
+        <button id="EmpleoButton" class="buttonIndicator"> Empleo  </button>
+        <div class="dropdown-content">
+          <p id="Empleo" > </p>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button id="NegociosButton" class="buttonIndicator"> Negocios  </button>
+        <div class="dropdown-content">
+          <p id="Negocios"></p>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button id="PoblaciónButton" class="buttonIndicator"> Población</button>
+        <div class="dropdown-content">
+          <a id="Población" > </a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button id="SaludButton" class="buttonIndicator"> Salud</button>
+        <div class="dropdown-content">
+          <a id="Salud"> </a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button id="ViolenciaButton" class="buttonIndicator"> Violencia </button>
+        <div class="dropdown-content">
+          <a id="Violencia"> </a>
+        </div>
+      </div>
+      <br> <button id="menu" class="menu"><i class="material-icons">home</i></button>
 
     </div>
 
-        <script type="module" src="main.js"></script>
+    <script type="module" src="main.js"></script>
 
   </body>
   </html>

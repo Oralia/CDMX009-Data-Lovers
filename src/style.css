@@ -123,10 +123,58 @@ background-image:url("mexicobandera.jpg");
 /*  padding: 100px;*/
 
 }
-.summary{
+.summary {
   margin-top: 500px;
   color: black;
   /*padding: 5px;*/
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+}
+
+.selectIndicator{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+.buttonIndicator {
+  background-color: #E338E8;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: outset;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dropdown {
+  position: relative;
+  display: inline;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*.dropdown-content a:hover {background-color: #E096FF}*/
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
