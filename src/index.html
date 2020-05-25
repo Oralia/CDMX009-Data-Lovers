@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="style.css" />
 </style>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 </head>
 
 <body>
-  <div id="screen">
+     <div id="screen">
     <div class="header">
       <p>LA VIDA DE LAS MUJERES EN LATINOAMERICA</p>
     </div>
@@ -62,55 +63,93 @@
     <!--Pantalla que muestra los indicadores -->
     <div id="screenIndicators">
       <p class="selectIndicator"> Selecciona el indicador que deseas conocer</p>
-
       <br>
 
-      <div class="dropdown">
-        <button id="EducacionButton" class="buttonIndicator"> Educación</button>
-        <div class="dropdown-content">
-          <a href="#" id="Educación" > </a>
-        </div>
-      </div>
 
-      <div class="dropdown">
-        <button id="EmpleoButton" class="buttonIndicator"> Empleo  </button>
-        <div class="dropdown-content">
-          <p id="Empleo" > </p>
-        </div>
-      </div>
+  <section id="screenIndicatorEducacion">
+    <button id="EducacionButton" class="buttonIndicator"> Educación</button>
+  </section>
 
-      <div class="dropdown">
-        <button id="NegociosButton" class="buttonIndicator"> Negocios  </button>
-        <div class="dropdown-content">
-          <p id="Negocios"></p>
-        </div>
-      </div>
+  <section class="Indicator" id="screenIndicatorEducacion2">
+    <h3>Educación:</h3>
+    <select class="indicatorEducacion" id="indicatorEducacion">
+      <option label="Seleccione indicador" value="-"></option>
+    </select>
+    <button id="graficarEducacion" >Graficar</button>
+  </section>
 
-      <div class="dropdown">
-        <button id="PoblaciónButton" class="buttonIndicator"> Población</button>
-        <div class="dropdown-content">
-          <a id="Población" > </a>
-        </div>
-      </div>
 
-      <div class="dropdown">
-        <button id="SaludButton" class="buttonIndicator"> Salud</button>
-        <div class="dropdown-content">
-          <a id="Salud"> </a>
-        </div>
-      </div>
+  <section id="screenIndicatorEmpleo">
+    <button id="EmpleoButton" class="buttonIndicator"> Empleo</button>
+  </section>
 
-      <div class="dropdown">
-        <button id="ViolenciaButton" class="buttonIndicator"> Violencia </button>
-        <div class="dropdown-content">
-          <a id="Violencia"> </a>
-        </div>
-      </div>
-      <br> <button id="menu" class="menu"><i class="material-icons">home</i></button>
+  <section class="Indicator" id="screenIndicatorEmpleo2">
+    <h3>Empleo:</h3>
+    <select class='indicatorEmpleo' id="indicatorEmpleo">
+      <option label="Seleccione indicador" value="-"></option>
+    </select>
+    <button id="graficarEmpleo" >Graficar</button>
+  </section>
 
-    </div>
 
-    <script type="module" src="main.js"></script>
+  <section id="screenIndicatorNegocios">
+    <button id="NegociosButton" class="buttonIndicator"> Negocios</button>
+  </section>
 
-  </body>
-  </html>
+  <section class="Indicator" id="screenIndicatorNegocios2">
+    <h3>Negocios:</h3>
+    <select id="indicatorNegocios">
+      <option label="Seleccione indicador" value="-"></option>
+    </select>
+    <button id="graficarNegocios" >Graficar</button>
+
+  </section>
+
+  <section id="screenIndicatorPoblación">
+    <button id="PoblaciónButton" class="buttonIndicator"> Población</button>
+  </section>
+  <section class="Indicator" id="screenIndicatorPoblación2">
+    <h3>Población:</h3>
+    <select id="indicatorPoblacion">
+      <option label="Seleccione indicador" value="-"></option>
+    </select>
+    <button id="graficarPoblacion" >Graficar</button>
+
+  </section>
+
+  <section id="screenIndicatorSalud">
+    <button id="SaludButton" class="buttonIndicator"> Salud</button>
+  </section>
+  <section class="Indicator" id="screenIndicatorSalud2">
+    <h3>Salud:</h3>
+    <select id="indicatorSalud">
+      <option label="Seleccione indicador" value="-"></option>
+    </select>
+    <button id="graficarSalud" >Graficar</button>
+  </section>
+
+
+  <section id="screenIndicatorViolencia">
+    <button id="ViolenciaButton" class="buttonIndicator"> Violencia</button>
+  </section>
+  <section class="Indicator" id="screenIndicatorViolencia2">
+    <h3>Violencia:</h3>
+    <select id="indicatorViolencia">
+      <option label="Seleccione indicador" value="-"></option>
+    </select>
+    <button id="graficarViolencia" >Graficar</button>
+  </section>
+
+  <div class="chartContainer">
+    <canvas class="indicatorsChart" id="indicatorsChart"></canvas>
+  </div>
+
+<canvas id="myChart" width="600" height="300"></canvas>
+
+<br> <button id="menu" class="menu"><i class="material-icons">home</i></button>
+
+
+<script type="module" src="main.js"></script>
+
+</body>
+</html>

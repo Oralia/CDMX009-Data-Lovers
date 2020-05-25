@@ -3,7 +3,7 @@
 }
 
 /*Bloqueo inicial de las pantalla*/
-#screenBrasil, #screenChile,#screenMexico,#screenPeru,#screenIndicators{display: none;}
+#screenBrasil, #screenChile,#screenMexico,#screenPeru,#screenIndicators,#screenIndicatorEducacion2,#screenIndicatorEmpleo2, #screenIndicatorNegocios2, #screenIndicatorPoblación2, #screenIndicatorSalud2, #screenIndicatorViolencia2{display: none;}
 
 .header{
   font-size: 40px;
@@ -130,7 +130,6 @@ background-image:url("mexicobandera.jpg");
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
-
 .selectIndicator{
   text-align: center;
   font-size: 30px;
@@ -140,41 +139,13 @@ background-image:url("mexicobandera.jpg");
 
 
 
-.buttonIndicator {
-  background-color: #E338E8;
-  color: white;
+.Indicator{
+  /*background-color: #E338E8;
+  color: white;*/
   padding: 16px;
   font-size: 16px;
-  border-radius: 8px;
+  /*border-radius: 8px;
   border: outset;
-  cursor: pointer;
+  cursor: pointer;*/
   font-family: 'Roboto', sans-serif;
-}
-
-.dropdown {
-  position: relative;
-  display: inline;
-}
-
-.dropdown-content {
-  display: none;
-  background-color: #ffffff;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  overflow: auto;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-family: 'Roboto', sans-serif;
-}
-
-/*.dropdown-content a:hover {background-color: #E096FF}*/
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
