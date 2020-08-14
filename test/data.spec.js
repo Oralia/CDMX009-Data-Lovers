@@ -1,13 +1,8 @@
-// importamos la función `example`
-import { example } from "../src/data";
+// importamos la funciónrun test
+import { showIndicatorEducacion } from "./src/main.js";
 
-describe('example', () => {
-
-  it('debería ser una función', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  describe('example', () => {
-    // escribe aquí tu test
+describe("showIndicator", () => {
+  it("should be a function", () => {
+    expect(typeof showIndicatorEducacion).toEqual("function");
   });
 });
