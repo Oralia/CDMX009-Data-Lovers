@@ -3,55 +3,84 @@
 }
 
 /*Bloqueo inicial de las pantalla*/
-#screenBrasil, #screenChile,#screenMexico,#screenPeru,#screenIndicators,#screenIndicatorEducacion2,#screenIndicatorEmpleo2, #screenIndicatorNegocios2, #screenIndicatorPoblación2, #screenIndicatorSalud2, #screenIndicatorViolencia2{display: none;}
+#screenBrasil,
+#screenChile,
+#screenMexico,
+#screenPeru,
+#screenIndicators,
+#screenIndicatorEducacion2,
+#screenIndicatorEmpleo2,
+#screenIndicatorNegocios2,
+#screenIndicatorPoblación2,
+#screenIndicatorSalud2,
+#screenIndicatorViolencia2 {
+  display: none;
+}
 
-.header{
+.header {
   font-size: 40px;
   text-align: center;
   padding: 20px;
-  background-color: #C94AFF;
-  color:#ffffff;
+  background-color: #b77d8f;
+  color: #f9f9f6;
 }
-.title{
+.title {
   font-family: Oranienbaum;
 }
 
-
-
-[class*="col-"]{
-  float:left;
-  padding:15px;
+[class*="col-"] {
+  float: left;
+  padding: 15px;
 }
 
 /*Declarando las columnas para el diseno responsive*/
 
 /*Celular*/
-[class*="col-"]{
+[class*="col-"] {
   width: 100%;
 }
 
-
 @media only screen and (min-width: 768px) {
-
-/*computadora*/
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
+  /*computadora*/
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
 }
 
-
-
-body{
+body {
   background-color: #ffffff;
   padding: 30px;
 }
@@ -62,13 +91,12 @@ body{
   padding: 0;
 }
 
-
 /*Botones del menu de paises*/
-.button{
+.button {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
-  border-color: #684F80;
+  border-color: #684f80;
   border-radius: 8px;
   width: 90px;
   height: 55px;
@@ -76,70 +104,62 @@ body{
   border: outset;
 }
 
-
 /*Nombre de cada pais*/
-.countries,#indicatorsType{
-  color:black;
+.countries,
+#indicatorsType {
+  color: black;
   font-size: 25px;
   text-align: left;
-  background-color:transparent;
+  background-color: transparent;
   background-size: contain;
   padding: 5px;
-  font-family: 'Roboto', sans-serif;
-
-  }
-
-
-#buttonBrasil{
-    background-image:url("brasilbandera.jpg");
-  }
-#buttonChile{
-background-image:url("chilebandera.jpg");
-}
-#buttonPeru{
-background-image:url("perubandera.jpg");
-}
-#buttonMexico{
-background-image:url("mexicobandera.jpg");
+  font-family: "Roboto", sans-serif;
 }
 
+#buttonBrasil {
+  background-image: url("brasilbandera.jpg");
+}
+#buttonChile {
+  background-image: url("chilebandera.jpg");
+}
+#buttonPeru {
+  background-image: url("perubandera.jpg");
+}
+#buttonMexico {
+  background-image: url("mexicobandera.jpg");
+}
 
 .countriesScreen {
-
   text-align: center;
   font-size: 35px;
-  background-color: #C94AFF;
-  color:#ffffff;
-  font-family: 'Roboto', sans-serif;
+  background-color: #c94aff;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
 }
 /*main*/
-.col-10{
+.col-10 {
   border-style: outset;
-  background-image:url("mujeres.jpg");
+  background-image: url("mujeres.jpg");
   background-size: auto;
   /*background-repeat: no-repeat;*/
   max-width: 80%;
   height: 500px;
-/*  padding: 100px;*/
-
+  /*  padding: 100px;*/
 }
 .summary {
   margin-top: 500px;
   color: black;
   /*padding: 5px;*/
   font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-.selectIndicator{
+.selectIndicator {
   text-align: center;
   font-size: 30px;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Roboto", sans-serif;
 }
 
-
-
-.Indicator{
+.Indicator {
   /*background-color: #E338E8;
   color: white;*/
   padding: 16px;
@@ -147,5 +167,5 @@ background-image:url("mexicobandera.jpg");
   /*border-radius: 8px;
   border: outset;
   cursor: pointer;*/
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
