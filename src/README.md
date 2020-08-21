@@ -9,6 +9,6 @@ Podemos ingresar a la pagina y seleccionar el país del que nos interese conocer
 
 Posteriormente se selecciona el tipo de indicador para que puedas ver los indicadores que cada uno contiene.
 
-![Prototipo](datalovers.png)
+![image](https://user-images.githubusercontent.com/60665725/90861979-56204400-e352-11ea-9633-7fe3d3b20721.png)
 
 Empresa: Laboratoria
